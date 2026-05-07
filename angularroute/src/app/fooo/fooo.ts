@@ -2,10 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { JsonPipe, CommonModule } from '@angular/common'; // Aggiungi questo
+
 @Component({
- selector: 'app-fooo',
- templateUrl: './fooo.component.html',
- styleUrls: ['./fooo.component.css']
+  selector: 'app-fooo',
+  standalone: true, 
+  imports: [JsonPipe, CommonModule], 
+  templateUrl: './fooo.html',
+  styleUrls: ['./fooo.css']
 })
 export class foooComponent {
    data!: Object; 
